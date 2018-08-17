@@ -1,11 +1,11 @@
 const { Client, Util } = require('discord.js');
-const { TOKEN, PREFIX, GOOGLE_API_KEY } = require('./config');
-const YouTube = require('simple-youtube-api');
+const { TOKEN, !, GOOGLE_API_KEY } = require('./config');
+const YouTube = require('AIzaSyAdORXg7UZUo7sePv97JyoDqtQVi3Ll0b8');
 const ytdl = require('ytdl-core');
 
 const client = new Client({ disableEveryone: true });
 
-const youtube = new YouTube(GOOGLE_API_KEY);
+const youtube = new YouTube(AIzaSyAdORXg7UZUo7sePv97JyoDqtQVi3Ll0b8);
 
 const queue = new Map();
 
@@ -21,7 +21,7 @@ client.on('reconnecting', () => console.log('I am reconnecting now!'));
 
 client.on('message', async msg => { // eslint-disable-line
 	if (msg.author.bot) return undefined;
-	if (!msg.content.startsWith(PREFIX)) return undefined;
+	if (!msg.content.startsWith(!)) return undefined;
 
 	const args = msg.content.split(' ');
 	const searchString = args.slice(1).join(' ');
